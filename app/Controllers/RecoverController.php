@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Controllers;
 
@@ -25,13 +25,13 @@ class RecoverController extends BaseController
     public function index(): string|RedirectResponse
     {
         // Definición de las variables
-        $data = ['title' => 'Distribuidora Rex'];
+        $data = ['title' => 'Hecarse'];
         $data['welcome_message'] = lang('Recover.welcome_recover');
         $data['subtitle_recover'] = lang('Recover.subtitle_recover');
         $data['email_label'] = lang('Recover.email_label');
         $data['btn_recover'] = lang('Recover.btn_recover');
         $data['validation_required'] = lang('Recover.validation_required');
-        $data['back_to_login'] = lang('Recover.back_to_login');       
+        $data['back_to_login'] = lang('Recover.back_to_login');
 
         // Retornar la vista con sus variables
         return view('recoverPassword', $data);
@@ -64,7 +64,7 @@ class RecoverController extends BaseController
                                 <head>
                                     <meta charset="UTF-8">
                                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                    <title>Recuperación de contraseña Portal Distribuidora Rex</title>
+                                    <title>Recuperación de contraseña Portal Hecarse</title>
                                     <style>
                                         body {
                                             font-family: Arial, sans-serif;
@@ -81,7 +81,7 @@ class RecoverController extends BaseController
                                             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
                                         }
                                         h2 {
-                                            color: #003b7d;
+                                            color: #41a867;
                                             text-align: center;
                                         }
                                         .btn {
@@ -89,7 +89,7 @@ class RecoverController extends BaseController
                                             width: fit-content; 
                                             margin-left: auto; 
                                             margin-right: auto;
-                                            background-color: #003b7d;
+                                            background-color: #41a867;
                                             color: #fff;
                                             padding: 10px 20px;
                                             text-decoration: none;
@@ -99,14 +99,14 @@ class RecoverController extends BaseController
                                             transition: background-color 0.3s ease;
                                         }
                                         .btn:hover {
-                                            background-color: #003b7d;
+                                            background-color: #41a867;
                                         }
                                     </style>
                                 </head>
                                 <body>
                                     <div class="container">
                                         <h2>Enlace de Recuperación</h2>
-                                        <p>Para restablecer tu contraseña y acceder al portal de Distribuidora Rex, haz clic en el siguiente botón. Este enlace te llevará al formulario para actualizar tu contraseña.</p>
+                                        <p>Para restablecer tu contraseña y acceder al portal de Hecarse, haz clic en el siguiente botón. Este enlace te llevará al formulario para actualizar tu contraseña.</p>
                                         <p>Ten en cuenta que el enlace será válido solo para un único cambio de contraseña y tendrá una duración de 1 hora a partir de su generación.</p>
                                         <div style="text-align: center;">
                                             <a href="' . $enlace . '" class="btn">Recupera tu Contraseña Aquí</a><br><br><br>
@@ -116,7 +116,7 @@ class RecoverController extends BaseController
                                                     border:1px solid #ABABAB; box-sizing:border-box; word-break:break-word;">
                                                 <div style="display: flex; align-items: center;">
                                                     <!-- Logo -->
-                                                    <img src="https://distrirex.com/app/public/assets/img/logo_fondo_oscuro.png" 
+                                                    <img src="https://distrirex.com/app/public/assets/img/logo_hecarse.png" 
                                                         style="width: 150px; height: 80px; margin-right: 30px;">
                                                     
                                                     <!-- Texto -->

@@ -14,17 +14,20 @@
     <!-- Sección de Tabs -->
     <ul class="nav nav-tabs" id="userManagementTabs" role="tablist">
         <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="listUsers-tab" data-bs-toggle="tab" href="#listUsers" role="tab" aria-controls="listUsers" aria-selected="true">
+            <a class="nav-link active" id="listUsers-tab" data-bs-toggle="tab" href="#listUsers" role="tab"
+                aria-controls="listUsers" aria-selected="true">
                 Lista de Usuarios
             </a>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link" id="createUser-tab" data-bs-toggle="tab" href="#createUser" role="tab" aria-controls="createUser" aria-selected="false">
+            <a class="nav-link" id="createUser-tab" data-bs-toggle="tab" href="#createUser" role="tab"
+                aria-controls="createUser" aria-selected="false">
                 Crear Usuario
             </a>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link" id="assignRoles-tab" data-bs-toggle="tab" href="#assignRoles" role="tab" aria-controls="assignRoles" aria-selected="false">
+            <a class="nav-link" id="assignRoles-tab" data-bs-toggle="tab" href="#assignRoles" role="tab"
+                aria-controls="assignRoles" aria-selected="false">
                 Asignar Roles
             </a>
         </li>
@@ -55,7 +58,9 @@
                                 <label for="nombre_crear" class="form-label">Nombre:</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
-                                    <input type="text" class="form-control shadow-sm" id="nombre_crear" placeholder="Digite el nombre del usuario" onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
+                                    <input type="text" class="form-control shadow-sm" id="nombre_crear"
+                                        placeholder="Digite el nombre del usuario"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
                                 </div>
                             </div>
 
@@ -64,7 +69,9 @@
                                 <label for="apellido_crear" class="form-label">Apellido:</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-light"><i class="bi bi-person-fill"></i></span>
-                                    <input type="text" class="form-control shadow-sm" id="apellido_crear" placeholder="Digite el apellido del usuario" onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
+                                    <input type="text" class="form-control shadow-sm" id="apellido_crear"
+                                        placeholder="Digite el apellido del usuario"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
                                 </div>
                             </div>
 
@@ -73,7 +80,9 @@
                                 <label for="usuario_crear" class="form-label">Usuario:</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-light"><i class="bi bi-person-fill"></i></span>
-                                    <input type="text" class="form-control shadow-sm" id="usuario_crear" placeholder="Digite el usuario de inicio de sesión" onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
+                                    <input type="text" class="form-control shadow-sm" id="usuario_crear"
+                                        placeholder="Digite el usuario de inicio de sesión"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +93,9 @@
                                 <label for="empresa_crear" class="form-label">Empresa:</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-light"><i class="bi bi-building"></i></span>
-                                    <input type="text" class="form-control shadow-sm" id="empresa_crear" placeholder="Digite la empresa del usuario" onkeypress="return noStrangeCharacters(event)" onpaste="return false">
+                                    <input type="text" class="form-control shadow-sm" id="empresa_crear"
+                                        placeholder="Digite la empresa del usuario"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false">
                                 </div>
                             </div>
 
@@ -93,7 +104,9 @@
                                 <label for="email_crear" class="form-label">Email:</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-light"><i class="bi bi-envelope"></i></span>
-                                    <input type="email" class="form-control shadow-sm" id="email_crear" placeholder="Digite el correo electrónico" onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
+                                    <input type="email" class="form-control shadow-sm" id="email_crear"
+                                        placeholder="Digite el correo electrónico"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
                                 </div>
                             </div>
 
@@ -102,7 +115,9 @@
                                 <label for="telefono_crear" class="form-label">Teléfono:</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-light"><i class="bi bi-telephone"></i></span>
-                                    <input type="text" class="form-control shadow-sm" id="telefono_crear" placeholder="Digite el número de teléfono" onkeypress="soloNumeros(event)" onpaste="return false">
+                                    <input type="text" class="form-control shadow-sm" id="telefono_crear"
+                                        placeholder="Digite el número de teléfono" onkeypress="soloNumeros(event)"
+                                        onpaste="return false">
                                 </div>
                             </div>
 
@@ -110,38 +125,25 @@
 
                         <div class="row mb-4">
                             <!-- Documento -->
-                            <div class="col-3">
+                            <div class="col-4">
                                 <label for="documento_crear" class="form-label">Documento:</label>
                                 <div class="input-group">
-                                    <span class="input-group-text bg-light"><i class="bi bi-file-earmark-text"></i></span>
-                                    <input type="text" class="form-control shadow-sm" id="documento_crear" placeholder="Digite el número de documento" onkeypress="soloNumeros(event)" onpaste="return false" required>
+                                    <span class="input-group-text bg-light"><i
+                                            class="bi bi-file-earmark-text"></i></span>
+                                    <input type="text" class="form-control shadow-sm" id="documento_crear"
+                                        placeholder="Digite el número de documento" onkeypress="soloNumeros(event)"
+                                        onpaste="return false" required>
                                 </div>
                             </div>
 
                             <!-- Contraseña -->
-                            <div class="col-3">
+                            <div class="col-4">
                                 <label for="password_crear" class="form-label">Contraseña:</label>
                                 <div class="input-group">
                                     <span class="input-group-text bg-light"><i class="bi bi-lock"></i></span>
-                                    <input type="password" class="form-control shadow-sm" id="password_crear" placeholder="Digite la contraseña (cédula)" onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
-                                </div>
-                            </div>
-
-                            <!-- Centro de operación -->
-                            <div class="col-3">
-                                <label for="centro_crear" class="form-label">Centro de operación:</label>
-                                <div class="input-group">
-                                    <i class="input-group-text bi bi-pin-map-fill"></i>
-                                    <select class="form-select" name="centro_crear" id="centro_crear" required></select>
-                                </div>
-                            </div>
-
-                            <!-- Usuario Externo -->
-                            <div class="col-3">
-                                <label for="usuario_externo_crear" class="form-label">Usuario Externo:</label>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input shadow-sm" type="checkbox" id="usuario_externo_crear">
-                                    <label class="form-check-label ms-2" for="usuario_externo_crear">¿Es un usuario externo?</label>
+                                    <input type="password" class="form-control shadow-sm" id="password_crear"
+                                        placeholder="Digite la contraseña (cédula)"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +151,8 @@
                         <!-- Botón de Crear Usuario -->
                         <div class="row">
                             <div class="col-sm-12 text-center">
-                                <button type="submit" class="btn btn-primary w-50 shadow-sm" id="btn_crear_usuario">Crear Usuario</button>
+                                <button type="submit" class="btn btn-primary w-50 shadow-sm"
+                                    id="btn_crear_usuario">Crear Usuario</button>
                             </div>
                         </div>
                     </form>
@@ -167,7 +170,7 @@
                             <label for="searchUser" class="form-label">Consultar Usuario por Nombre</label>
                             <select id="select_usuario" class="form-control">
 
-                            </select>   
+                            </select>
                         </div>
                     </div>
 
@@ -201,7 +204,8 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="selectMultipleUsers" class="form-label">Seleccione Usuarios</label>
-                            <select class="form-select" id="selectMultipleUsers" multiple aria-label="Seleccione varios usuarios">
+                            <select class="form-select" id="selectMultipleUsers" multiple
+                                aria-label="Seleccione varios usuarios">
                                 <?= $lista_usuarios_activos ?>
                             </select>
                         </div>
@@ -217,7 +221,8 @@
                     <!-- Botón de Asignar Roles Masivos -->
                     <div class="row">
                         <div class="col-md-12">
-                            <button type="button" class="btn btn-primary w-100" id="btn_asignar_rol_masivo" onclick="asignarRolMasivo()">Asignar Rol a Usuarios Seleccionados</button>
+                            <button type="button" class="btn btn-primary w-100" id="btn_asignar_rol_masivo"
+                                onclick="asignarRolMasivo()">Asignar Rol a Usuarios Seleccionados</button>
                         </div>
                     </div>
 
@@ -234,12 +239,14 @@
                 <div class="modal-header">
                     <ul class="nav nav-tabs" id="userEditTabs" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="EditUser-tab" data-bs-toggle="tab" href="#editUser" role="tab" aria-controls="editUser" aria-selected="true">
+                            <a class="nav-link active" id="EditUser-tab" data-bs-toggle="tab" href="#editUser"
+                                role="tab" aria-controls="editUser" aria-selected="true">
                                 Editar Información
                             </a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="PassRecover-tab" data-bs-toggle="tab" href="#passRecover" role="tab" aria-controls="passRecover" aria-selected="false">
+                            <a class="nav-link" id="PassRecover-tab" data-bs-toggle="tab" href="#passRecover" role="tab"
+                                aria-controls="passRecover" aria-selected="false">
                                 Reestablecer Contraseña
                             </a>
                         </li>
@@ -251,45 +258,48 @@
                     <div class="tab-content" id="userEditTabsContent">
 
                         <!-- TAB 1: Editar Usuario -->
-                        <div class="tab-pane fade show active" id="editUser" role="tabpanel" aria-labelledby="EditUser-tab">
+                        <div class="tab-pane fade show active" id="editUser" role="tabpanel"
+                            aria-labelledby="EditUser-tab">
                             <form class="row g-3" id="formulario_editar_usuario">
                                 <div class="col-md-4">
                                     <label for="nombre" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="nombre" value="" onkeypress="return noStrangeCharacters(event)" onpaste="return false">
+                                    <input type="text" class="form-control" id="nombre" value=""
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="apellido" class="form-label">Apellido</label>
-                                    <input type="text" class="form-control" id="apellido" value="" onkeypress="return noStrangeCharacters(event)" onpaste="return false">
+                                    <input type="text" class="form-control" id="apellido" value=""
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="usuario" class="form-label">Usuario</label>
-                                    <input type="text" class="form-control" id="usuario" aria-describedby="inputGroupPrepend" onkeypress="return noStrangeCharacters(event)" onpaste="return false">
+                                    <input type="text" class="form-control" id="usuario"
+                                        aria-describedby="inputGroupPrepend"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="empresa" class="form-label">Empresa</label>
-                                    <input type="text" class="form-control" id="empresa" aria-describedby="inputGroupPrepend" onkeypress="return noStrangeCharacters(event)" onpaste="return false">
+                                    <input type="text" class="form-control" id="empresa"
+                                        aria-describedby="inputGroupPrepend"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="text" class="form-control" id="email_usuario" onkeypress="return noStrangeCharacters(event)" onpaste="return false">
+                                    <input type="text" class="form-control" id="email_usuario"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="telefono" class="form-label">Télefono</label>
-                                    <input type="number" class="form-control" id="telefono" onkeypress="return noStrangeCharacters(event)" onpaste="return false">
+                                    <input type="number" class="form-control" id="telefono"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false">
                                 </div>
                                 <div class="col-md-4">
                                     <label for="documento" class="form-label">Documento</label>
-                                    <input type="number" class="form-control" id="documento" onkeypress="return noStrangeCharacters(event)" onpaste="return false">
+                                    <input type="number" class="form-control" id="documento"
+                                        onkeypress="return noStrangeCharacters(event)" onpaste="return false">
                                 </div>
                                 <div class="col-md-4">
-                                    <label for="centro" class="form-label">Centro operación</label>
-                                    <input type="number" class="form-control" id="centro" onkeypress="return noStrangeCharacters(event)" onpaste="return false">
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="externo" class="form-label">Usuario externo</label>
-                                    <input type="text" class="form-control" id="externo" onkeypress="return noStrangeCharacters(event)" onpaste="return false">
-                                </div>
-                                <div class="col-12">
+                                    <label for="estado" class="form-label">Estado</label>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
                                         <label class="form-check-label" for="invalidCheck">
@@ -301,8 +311,10 @@
                                 <input type="hidden" id="Id" value="">
 
                                 <div class="col-12 text-center">
-                                    <button class="btn btn-primary" type="submit" id="btn_actualizar_usuario">Guardar</button>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                    <button class="btn btn-primary" type="submit"
+                                        id="btn_actualizar_usuario">Guardar</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
                                 </div>
                             </form>
                         </div>
@@ -313,8 +325,11 @@
                                 <div class="mb-3">
                                     <label for="newPassword" class="form-label">Nueva Contraseña</label>
                                     <div class="input-group has-validation">
-                                        <input type="password" class="form-control" id="newPassword" onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
-                                        <span class="input-group-text togglePassword" onclick="togglePasswordVisibility('newPassword','togglePasswordIcon1')">
+                                        <input type="password" class="form-control" id="newPassword"
+                                            onkeypress="return noStrangeCharacters(event)" onpaste="return false"
+                                            required>
+                                        <span class="input-group-text togglePassword"
+                                            onclick="togglePasswordVisibility('newPassword','togglePasswordIcon1')">
                                             <i class="bi bi-eye" id="togglePasswordIcon1"></i>
                                         </span>
                                     </div>
@@ -322,14 +337,18 @@
                                 <div class="mb-3">
                                     <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
                                     <div class="input-group has-validation">
-                                        <input type="password" class="form-control" id="confirmPassword" onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
-                                        <span class="input-group-text togglePassword" onclick="togglePasswordVisibility('confirmPassword','togglePasswordIcon2')">
+                                        <input type="password" class="form-control" id="confirmPassword"
+                                            onkeypress="return noStrangeCharacters(event)" onpaste="return false"
+                                            required>
+                                        <span class="input-group-text togglePassword"
+                                            onclick="togglePasswordVisibility('confirmPassword','togglePasswordIcon2')">
                                             <i class="bi bi-eye" id="togglePasswordIcon2"></i>
                                         </span>
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary" id="btn_restablecer_contraseña">Restablecer</button>
+                                    <button type="submit" class="btn btn-primary"
+                                        id="btn_restablecer_contraseña">Restablecer</button>
                                 </div>
                             </form>
                         </div>
@@ -384,8 +403,6 @@
         formData.append('Email', $('#email_usuario').val());
         formData.append('Telefono', $('#telefono').val());
         formData.append('Documento', $('#documento').val());
-        formData.append('Centro', $('#centro').val());
-        formData.append('UsuarioExterno', $('#externo').val());
         formData.append('FechaFinalizacion', $('#invalidCheck').prop('checked') ? 1 : 0);
 
         try {
@@ -412,37 +429,6 @@
         }
     }
 
-    const obtenerCentrosOperaciones = async (callback) => {
-        try {
-            const response = await fetch(`<?= base_url() ?>admin/admin/obtenerCentrosOperaciones`, {
-                method: 'POST'
-            });
-            const result = await response.json();
-
-            if(result.success){
-                let html = `<option value="">Seleccionar centro operación...</option>`;
-                
-                result.centros_operaciones.forEach(item => {
-                    html += `<option value="${item.Id}">${item.Codigo} - ${item.Descripcion}</option>`;
-                });
-            
-                $('#centro_crear').html(html);
-                if (callback) callback();
-            } else {
-                Toast.fire({
-                    icon: 'error',
-                    title: 'Ocurrió un error al obtener los centros de operaciones.'
-                });
-            }
-        } catch (error) {
-            Toast.fire({
-                icon: 'error',
-                title: 'Fallo al acceder a admin/admin/obtenerCentrosOperaciones'
-            });
-            console.log('Se ha producido un error: ', error);
-        }
-    }
-
     /**
      * Metodo para obtener la informacion de un usuario en especifico
      * cuando se abre el modal de edicion.
@@ -465,8 +451,6 @@
                 $('#email_usuario').val(result.usuario.Email);
                 $('#telefono').val(result.usuario.Telefono);
                 $('#documento').val(result.usuario.Documento);
-                $('#centro').val(result.usuario.CentroOperacion);
-                $('#externo').val(result.usuario.UsuarioExterno);
                 $('#invalidCheck').prop('checked', result.usuario.FechaFinalizacion === null);
             }
 
@@ -518,14 +502,12 @@
         const telefono = $('#telefono_crear').val().trim();
         const documento = $('#documento_crear').val().trim();
         const password = $('#password_crear').val().trim();
-        const centro = $('#centro_crear').val().trim();
-        const usuarioExterno = $('#usuario_externo_crear').is(':checked') ? 1 : 0;
 
         // Verificar si algún campo está vacío
-        if (!nombre || !apellido || !usuario || !email || !documento || !password || !centro) {
+        if (!nombre || !apellido || !usuario || !email || !documento || !password) {
             Toast.fire({
                 icon: 'warning',
-                title: 'Los campos de nombre, apellido, usuario, email, documento, contraseña y centro de operación son obligatorios.'
+                title: 'Los campos de nombre, apellido, usuario, email, documento y contraseña son obligatorios.'
             });
             $('#btn_crear_usuario').prop('disabled', false);
             return;
@@ -540,8 +522,6 @@
         formData.append('Telefono', telefono);
         formData.append('Documento', documento);
         formData.append('Password', password);
-        formData.append('Centro', centro);
-        formData.append('UsuarioExterno', usuarioExterno);
 
         try {
             const response = await fetch(`<?= base_url() ?>admin/usuarios/crearUsuario`, {
@@ -717,14 +697,6 @@
     /**
      * 
      */
-    document.addEventListener('DOMContentLoaded', function() {
-        renderizarTabla();
-        obtenerCentrosOperaciones();
-    });
-
-    /**
-     * 
-     */
     document.querySelector('#formulario_editar_usuario').addEventListener('submit', (e) => {
         e.preventDefault();
         updateUser();
@@ -749,12 +721,12 @@
             type: 'POST',
             dataType: 'json',
             delay: 250,
-            data: function(params) {
+            data: function (params) {
                 return {
                     term: params.term
                 };
             },
-            processResults: function(data) {
+            processResults: function (data) {
                 return {
                     results: data
                 };
@@ -768,7 +740,7 @@
     /**
      * 
      */
-    $('#select_usuario').on('select2:select', function(e) {
+    $('#select_usuario').on('select2:select', function (e) {
         usuarioId = e.params.data.id;
         obtenerRolesUsuario(usuarioId);
     });
@@ -776,7 +748,7 @@
     /**
      * 
      */
-    $('#select_usuario').on('select2:unselect', function(e) {
+    $('#select_usuario').on('select2:unselect', function (e) {
         document.querySelector('#userRolesList').innerHTML = 'Seleccione el usuario para ver los roles asignados.';
         document.querySelector('#availableUserRolesList').innerHTML = 'Seleccione el usuario para ver los roles que no tiene asignados.';
     });
@@ -808,7 +780,7 @@
                 icon: 'warning',
                 title: 'Las contraseñas ingresadas no coinciden.'
             });
-            $('#btn_restablecer_contraseña').prop('disabled', false); 
+            $('#btn_restablecer_contraseña').prop('disabled', false);
             return;
         }
 
@@ -857,14 +829,14 @@
      * el formulario de login.
      */
     const togglePasswordVisibility = (inputId, iconId) => {
-    const passwordInput = document.getElementById(inputId);
-    const togglePasswordIcon = document.getElementById(iconId);
+        const passwordInput = document.getElementById(inputId);
+        const togglePasswordIcon = document.getElementById(iconId);
 
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text'; 
-        togglePasswordIcon.classList.remove('bi-eye');
-        togglePasswordIcon.classList.add('bi-eye-slash');
-    } else {
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            togglePasswordIcon.classList.remove('bi-eye');
+            togglePasswordIcon.classList.add('bi-eye-slash');
+        } else {
             passwordInput.type = 'password';
             togglePasswordIcon.classList.remove('bi-eye-slash');
             togglePasswordIcon.classList.add('bi-eye');

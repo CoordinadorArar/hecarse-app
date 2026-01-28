@@ -1,0 +1,58 @@
+/* main {
+    zoom: 75%;
+} */
+
+
+/* EFECTOS DE LA CARD AL CARGAR LA PAGINA */
+@keyframes dropIn {
+    from {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card-animated {
+    animation: dropIn 0.3s ease-in-out;
+    opacity: 1;
+}
+
+
+/* EFECTOS DE LA CARD AL HACER HOVER */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+/* ESTILOS */
+
+.background-card {
+    background: #41a867;
+}
+
+#losetas i {
+    color: #fff;
+}
+
+.btn-logout{
+    color: #fff;
+    border-radius: 50%;
+    font-size: 25px;
+}
+.btn-logout:hover{
+    transform: scale(1.2);
+}

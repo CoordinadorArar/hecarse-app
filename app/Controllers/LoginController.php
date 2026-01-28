@@ -31,7 +31,7 @@ class LoginController extends BaseController
             return redirect()->to(base_url('losetas'));
         }
 
-        $data = ['title' => 'Distribuidora Rex'];
+        $data = ['title' => 'Hecarse'];
         $data['welcome_message'] = lang('Login.welcome_login');
         $data['subtitle_login'] = lang('Login.subtitle_login');
         $data['username'] = lang('Login.username');
@@ -77,10 +77,12 @@ class LoginController extends BaseController
                     $validaSeguridad = preg_match($expresion, $password);
                     $campoSegura = $user['ContrasenaSegura'];
 
-                    if(!$validaSeguridad || $campoSegura != 1) {
-                        return $this->response->setJSON(['success' => false,
-                            'requiereCambioPass' => true, 
-                            'message' => 'Debe actualizar su contraseña para cumplir con los requisitos de seguridad. La contraseña debe tener mínimo 8 caracteres, mayúsculas, minúsculas, números.']);
+                    if (!$validaSeguridad || $campoSegura != 1) {
+                        return $this->response->setJSON([
+                            'success' => false,
+                            'requiereCambioPass' => true,
+                            'message' => 'Debe actualizar su contraseña para cumplir con los requisitos de seguridad. La contraseña debe tener mínimo 8 caracteres, mayúsculas, minúsculas, números.'
+                        ]);
                     }
 
                     $this->usuarios_model->reiniciarIntentos($user['Id']);
@@ -94,7 +96,6 @@ class LoginController extends BaseController
                     $session->set('usu_nombres', $user['Nombre']);
                     $session->set('usu_apellidos', $user['Apellido']);
                     $session->set('usu_empresa', $user['Empresa']);
-                    $session->set('usu_co', $user['CentroOperacion']);
                     $session->set('usu_telefono', $user['Telefono']);
                     $session->set('usu_email', $user['Email']);
                     $session->set('ultimo_acceso', time());
@@ -164,7 +165,7 @@ class LoginController extends BaseController
         }
 
         session()->destroy();
-        
+
         return redirect()->to(site_url(''));
     }
 

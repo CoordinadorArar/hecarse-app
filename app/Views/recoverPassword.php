@@ -18,8 +18,7 @@
 
                         <div class="d-flex justify-content-center py-4">
                             <a href="#" class="logo d-flex align-items-center w-auto">
-                                <img src="public/assets/img/favicon_rex.png" width="30" alt="Distribuidora rex">
-                                <span class="d-none d-lg-block"><?= $title ?></span>
+                                <img src="public/assets/img/logo_hecarse.png" width="300" height="130" alt="Hecarse">
                             </a>
                         </div>
 
@@ -31,7 +30,8 @@
                                     <p class="text-center small"><?= $subtitle_recover ?></p>
                                 </div>
 
-                                <form id="formulario_recuperacion" class="row g-3 needs-validation" novalidate  method="POST">
+                                <form id="formulario_recuperacion" class="row g-3 needs-validation" novalidate
+                                    method="POST">
 
                                     <div class="col-12">
                                         <label for="email" class="form-label"><?= $email_label ?></label>
@@ -45,10 +45,12 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100" type="submit" id="btn_recuperar"><?= $btn_recover ?></button>
+                                        <button class="btn btn-primary w-100" type="submit"
+                                            id="btn_recuperar"><?= $btn_recover ?></button>
                                     </div>
                                     <div class="col-12 text-center">
-                                        <a class="small text-decoration-underline text-primary" href="<?= base_url('/') ?>"><?= $back_to_login ?></a>
+                                        <a class="small text-decoration-underline text-primary"
+                                            href="<?= base_url('/') ?>"><?= $back_to_login ?></a>
                                     </div>
                                 </form>
                             </div>
@@ -99,13 +101,13 @@
 
             const result = await response.json();
 
-            if(result.success){
+            if (result.success) {
                 loader('hide');
                 Toast.fire({
                     icon: 'success',
                     title: result.message
                 });
-            } else{
+            } else {
                 loader('hide');
                 Toast.fire({
                     icon: 'error',
@@ -125,7 +127,7 @@
             $('#btn_recuperar').prop('disabled', false);
         }
     }
-    
+
     document.querySelector('#formulario_recuperacion').addEventListener('submit', (e) => {
         e.preventDefault();
         recuperarClave();

@@ -28,7 +28,6 @@ class AdminController extends BaseController
         $this->session = session();
         $this->losetas_model = new LosetasModel();
         $this->admin_model = new AdminModel();
-        $this->precodificaciones_model = new PrecodificacionesModel();
     }
 
     /**
@@ -42,7 +41,7 @@ class AdminController extends BaseController
     {
         helper('ConstruirDataVista');
 
-        $data = construirVista($this->session->get('usu_id'),$id_loseta);
+        $data = construirVista($this->session->get('usu_id'), $id_loseta);
 
         if ($data instanceof RedirectResponse) {
             return $data;
@@ -74,45 +73,4 @@ class AdminController extends BaseController
         return $this->response->setJSON(['success' => true, 'ciudades' => $ciudades]);
     }
 
-    /**
-     * Metodo para consultar marcas
-     */
-    public function getMarcas(): ResponseInterface
-    {
-        $marcas = $this->precodificaciones_model->getMarcas();
-
-        return $this->response->setJSON(['success' => true,'marcas' => $marcas]);
-    }
-
-    /**
-     * Metodo para consultar proveedores
-     */
-    public function getProveedores(): ResponseInterface
-    {
-        $proveedores = $this->precodificaciones_model->getProveedores();
-
-        return $this->response->setJSON(['success' => true,'proveedores' => $proveedores]);
-    }
-
-    /**
-     * Metodo para consultar los centros de operaciones
-     */
-    public function getCentrosOperaciones(): ResponseInterface
-    {
-        $centros_operaciones = $this->admin_model->getCentrosOperaciones();
-
-        return $this->response->setJSON(['success' => true, 'centros_operaciones' => $centros_operaciones]);
-    }
-
-    /**
-     * Metodo que muestra documentos del sistema o de rex, recibe el nombre del documento
-     */
-    public function getDocumentos($nombre_documento)
-    {
-        $data = array(
-            'title' => 'Documentos Rex',
-            'archivo' => $nombre_documento
-        );
-        return view('admin/documentos', $data);
-    }
 }

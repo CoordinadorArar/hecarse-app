@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Distribuidora Rex',
+    'title' => 'Hecarse',
     'welcome_login' => 'Recuperación de contraseña',
     'subtitle_login' => 'Digite su nueva contraseña y vuelva a verificarla',
     'password' => 'Contraseña',
