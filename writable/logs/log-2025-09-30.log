@@ -1,0 +1,17 @@
+CRITICAL - 2025-09-30 09:59:16 --> InvalidArgumentException: Invalid session handler "file" provided.
+[Method: GET, Route: /]
+in SYSTEMPATH\Config\Services.php on line 690.
+ 1 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::session(Object(Config\Session), false)
+ 2 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('session', [...])
+ 3 SYSTEMPATH\Config\Services.php(668): CodeIgniter\Config\BaseService::getSharedInstance('session', null)
+ 4 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::session()
+ 5 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('session', [])
+ 6 SYSTEMPATH\Common.php(996): CodeIgniter\Config\BaseService::get('session')
+ 7 SYSTEMPATH\Common.php(969): service('session')
+ 8 APPPATH\Controllers\LoginController.php(28): session()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\LoginController->index()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

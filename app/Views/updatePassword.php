@@ -18,12 +18,13 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
-                    <div class="d-flex justify-content-center py-4">
-                        <a href="#" class="logo d-flex align-items-center w-auto">
-                            <img src="<?= base_url('public/assets/img/favicon_rex.png') ?>" width="30" alt="Distribuidora rex">
-                            <span class="d-none d-lg-block"><?= $title ?></span>
-                        </a>
-                    </div>
+                        <div class="d-flex justify-content-center py-4">
+                            <a href="#" class="logo d-flex align-items-center w-auto">
+                                <img src="<?= base_url('public/assets/img/logo_hecarse.png') ?>" width="30"
+                                    alt="Hecarse">
+                                <span class="d-none d-lg-block"><?= $title ?></span>
+                            </a>
+                        </div>
 
                         <div class="card mb-3">
 
@@ -36,8 +37,10 @@
 
                                 <form id="form_update_pass" class="row g-3 needs-validation" method="POST" novalidate>
 
-                                    <input type="hidden" name="token_generado" class="form-control" id="token_generado" value="<?= esc($token) ?>">
-                                    <input type="hidden" name="id_usuario" class="form-control" id="id_usuario" value="<?= esc($userId) ?>">
+                                    <input type="hidden" name="token_generado" class="form-control" id="token_generado"
+                                        value="<?= esc($token) ?>">
+                                    <input type="hidden" name="id_usuario" class="form-control" id="id_usuario"
+                                        value="<?= esc($userId) ?>">
 
                                     <div class="col-12">
                                         <label for="yourPassword" class="form-label"><?= $password ?></label>
@@ -45,8 +48,10 @@
                                             <span class="input-group-text">
                                                 <i class="bi bi-lock-fill"></i>
                                             </span>
-                                            <input type="password" name="password" class="form-control" id="password" required>
-                                            <span class="input-group-text togglePassword" onclick="togglePasswordVisibility('password','togglePasswordIcon')">
+                                            <input type="password" name="password" class="form-control" id="password"
+                                                required>
+                                            <span class="input-group-text togglePassword"
+                                                onclick="togglePasswordVisibility('password','togglePasswordIcon')">
                                                 <i class="bi bi-eye" id="togglePasswordIcon"></i>
                                             </span>
                                             <div class="invalid-feedback"><?= $validation_required ?></div>
@@ -59,8 +64,10 @@
                                             <span class="input-group-text">
                                                 <i class="bi bi-lock-fill"></i>
                                             </span>
-                                            <input type="password" name="password_confirm" class="form-control" id="password_confirm" required>
-                                            <span class="input-group-text togglePassword" onclick="togglePasswordVisibility('password_confirm','togglePasswordIcon2')">
+                                            <input type="password" name="password_confirm" class="form-control"
+                                                id="password_confirm" required>
+                                            <span class="input-group-text togglePassword"
+                                                onclick="togglePasswordVisibility('password_confirm','togglePasswordIcon2')">
                                                 <i class="bi bi-eye" id="togglePasswordIcon2"></i>
                                             </span>
                                             <div class="invalid-feedback"><?= $validation_required ?></div>
@@ -68,10 +75,12 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100" type="submit" id="btn_update_pass"><?= $btn_update_pass ?></button>
+                                        <button class="btn btn-primary w-100" type="submit"
+                                            id="btn_update_pass"><?= $btn_update_pass ?></button>
                                     </div>
                                     <div class="col-12 text-center">
-                                        <a class="small text-decoration-underline text-primary" href="pages-register.html"><?= $data_protection ?></a>                                       
+                                        <a class="small text-decoration-underline text-primary"
+                                            href="pages-register.html"><?= $data_protection ?></a>
                                     </div>
                                 </form>
 
@@ -114,15 +123,15 @@
      * el formulario de login.
     */
     const togglePasswordVisibility = (inputId, iconId) => {
-    const passwordInput = document.getElementById(inputId);  // Obtén el campo de la contraseña por su ID
-    const togglePasswordIcon = document.getElementById(iconId);  // Obtén el icono de visibilidad por su ID
+        const passwordInput = document.getElementById(inputId);  // Obtén el campo de la contraseña por su ID
+        const togglePasswordIcon = document.getElementById(iconId);  // Obtén el icono de visibilidad por su ID
 
-    // Verificar el tipo de campo y alternar entre 'password' y 'text'
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';  // Cambiar el tipo a 'text' para mostrar la contraseña
-        togglePasswordIcon.classList.remove('bi-eye');  // Quitar el icono de 'ojo cerrado'
-        togglePasswordIcon.classList.add('bi-eye-slash');  // Añadir el icono de 'ojo abierto'
-    } else {
+        // Verificar el tipo de campo y alternar entre 'password' y 'text'
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';  // Cambiar el tipo a 'text' para mostrar la contraseña
+            togglePasswordIcon.classList.remove('bi-eye');  // Quitar el icono de 'ojo cerrado'
+            togglePasswordIcon.classList.add('bi-eye-slash');  // Añadir el icono de 'ojo abierto'
+        } else {
             passwordInput.type = 'password';  // Cambiar el tipo a 'password' para ocultar la contraseña
             togglePasswordIcon.classList.remove('bi-eye-slash');  // Quitar el icono de 'ojo abierto'
             togglePasswordIcon.classList.add('bi-eye');  // Añadir el icono de 'ojo cerrado'
@@ -132,20 +141,20 @@
 
 
     // Mostrar el mensaje de error y redirigir después de 3 segundos (si existe un mensaje de error)
-    $(document).ready(function(){
+    $(document).ready(function () {
         <?php if (isset($msg_caducado) && !empty($msg_caducado)): ?>
             //loader('show');
             Toast.fire({
                 icon: 'error',
                 title: '<?= $msg_caducado ?>'
             });
-            setTimeout(function() {
+            setTimeout(function () {
                 loader("hide");
                 window.location.href = 'https://distrirex.com/app/'; // Redirige a la página de login
             }, 4000); // 4 segundos
         <?php endif; ?>
     })
-    
+
 
     /**
      * Funcion para actualizar la contraseña en la base de datos.
@@ -168,18 +177,18 @@
 
             const result = await response.json();
             loader('hide');
-            if(result.success){
+            if (result.success) {
                 Toast.fire({
                     icon: 'success',
                     title: result.message
                 });
-                
+
                 // Redirigir después de 5 segundos (5000 milisegundos)
-                setTimeout(function() {
+                setTimeout(function () {
                     loader('hide');
                     window.location.href = 'https://distrirex.com/app/'; // Redirige a la página de login
-                }, 3000); 
-            } else{
+                }, 3000);
+            } else {
                 loader('hide');
                 Toast.fire({
                     icon: 'error',
@@ -195,7 +204,7 @@
             loader('hide');
         }
     }
-    
+
 
     document.querySelector('#form_update_pass').addEventListener('submit', (e) => {
         e.preventDefault();

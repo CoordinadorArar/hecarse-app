@@ -39,9 +39,9 @@ class UsuariosController extends BaseController
      */
     public function index($id_loseta): string|RedirectResponse
     {
-        helper('ConstruirDataVista',);
+        helper('ConstruirDataVista', );
 
-        $data = construirVista($this->session->get('usu_id'),$id_loseta);
+        $data = construirVista($this->session->get('usu_id'), $id_loseta);
 
         if ($data instanceof RedirectResponse) {
             return $data;
@@ -103,7 +103,7 @@ class UsuariosController extends BaseController
      */
     public function getUserById(int $id): ResponseInterface
     {
-        $usuario =  $this->usuarios_model->getUserById($id);
+        $usuario = $this->usuarios_model->getUserById($id);
         return $this->response->setJSON(['success' => true, 'usuario' => $usuario]);
     }
 
@@ -124,9 +124,8 @@ class UsuariosController extends BaseController
             'Email' => $this->request->getVar('Email'),
             'Telefono' => $this->request->getVar('Telefono'),
             'Documento' => $this->request->getVar('Documento'),
-            'CentroOperacion' => $this->request->getVar('Centro'),
             'FechaModificacion' => $fecha,
-            'FechaFinalizacion' => $esInactivo? $fecha : null
+            'FechaFinalizacion' => $esInactivo ? $fecha : null
         ];
 
         if (!$esInactivo) {
@@ -191,7 +190,7 @@ class UsuariosController extends BaseController
             $html .= '
                 <li id="' . $rol['Id'] . '" class="list-group-item d-flex justify-content-between align-items-center">
                     ' . $rol['Nombre'] . '
-                    <button id="asignar_' .  esc($rol['Id'])  . '" type="button" class="btn btn-primary btn-sm" onclick="asginarRol(' . esc($rol['Id']) . ')">Asignar</button>
+                    <button id="asignar_' . esc($rol['Id']) . '" type="button" class="btn btn-primary btn-sm" onclick="asginarRol(' . esc($rol['Id']) . ')">Asignar</button>
                 </li>
             ';
         }
@@ -215,7 +214,7 @@ class UsuariosController extends BaseController
             $html .= '
                 <li id="' . $rol['Id'] . '" class="list-group-item d-flex justify-content-between align-items-center">
                     ' . $rol['Nombre'] . '
-                    <button id="quitar_' .  esc($rol['Id'])  . '" type="button" class="btn btn-primary btn-sm" onclick="quitarRol(' . esc($rol['Id']) . ')">Quitar</button>
+                    <button id="quitar_' . esc($rol['Id']) . '" type="button" class="btn btn-primary btn-sm" onclick="quitarRol(' . esc($rol['Id']) . ')">Quitar</button>
                 </li>
             ';
         }
@@ -312,7 +311,7 @@ class UsuariosController extends BaseController
         return $this->response->setJSON([
             'success' => true,
             'message' =>
-            'Roles asignados correctamente.',
+                'Roles asignados correctamente.',
             'roles' => $roles,
             'usuarios' => $usuarios
         ]);
@@ -342,9 +341,7 @@ class UsuariosController extends BaseController
             'Email' => $this->request->getVar('Email'),
             'Telefono' => $this->request->getVar('Telefono'),
             'Documento' => $this->request->getVar('Documento'),
-            'Contrasena' => md5($this->request->getVar('Password')),
-            'CentroOperacion' => $this->request->getVar('Centro'),
-            'UsuarioExterno' => $this->request->getVar('UsuarioExterno')
+            'Contrasena' => md5($this->request->getVar('Password'))
         ];
 
         $this->usuarios_model->createUser($data);
@@ -410,7 +407,7 @@ class UsuariosController extends BaseController
     public function guardarFotoPerfil()
     {
         $id = $this->request->getPost('id_usuario');
-        $imagen =$this->request->getFile('imagenPerfil');
+        $imagen = $this->request->getFile('imagenPerfil');
 
         if (!$imagen->isValid()) {
             return $this->response->setJSON([

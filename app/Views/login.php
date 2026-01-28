@@ -18,9 +18,9 @@
                     <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
                         <div class="d-flex justify-content-center py-4">
-                            <a href="#" class="logo d-flex align-items-center w-auto">
-                                <img src="public/assets/img/favicon_rex.png" width="30" alt="Distribuidora rex">
-                                <span class="d-none d-lg-block"><?= $title ?></span>
+                            <a href="#" class="logo d-flex align-items-center">
+                                <img src="public/assets/img/logo_hecarse.png" width="300" height="130" alt="Hecarse">
+
                             </a>
                         </div>
 
@@ -40,7 +40,9 @@
                                             <span class="input-group-text" id="inputGroupPrepend">
                                                 <i class="bi bi-person-fill"></i>
                                             </span>
-                                            <input type="text" name="username" class="form-control" id="username" onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
+                                            <input type="text" name="username" class="form-control" id="username"
+                                                onkeypress="return noStrangeCharacters(event)" onpaste="return false"
+                                                required>
                                             <div class="invalid-feedback"><?= $validation_required ?></div>
                                         </div>
                                     </div>
@@ -51,8 +53,11 @@
                                             <span class="input-group-text">
                                                 <i class="bi bi-lock-fill"></i>
                                             </span>
-                                            <input type="password" name="password" class="form-control" id="password" onkeypress="return noStrangeCharacters(event)" onpaste="return false" required>
-                                            <span class="input-group-text togglePassword" onclick="togglePasswordVisibility()">
+                                            <input type="password" name="password" class="form-control" id="password"
+                                                onkeypress="return noStrangeCharacters(event)" onpaste="return false"
+                                                required>
+                                            <span class="input-group-text togglePassword"
+                                                onclick="togglePasswordVisibility()">
                                                 <i class="bi bi-eye" id="togglePasswordIcon"></i>
                                             </span>
                                             <div class="invalid-feedback"><?= $validation_required ?></div>
@@ -63,10 +68,12 @@
                                         <button class="btn btn-primary w-100" type="submit"><?= $btn_login ?></button>
                                     </div>
                                     <div class="col-12 text-center">
-                                        <a class="small text-decoration-underline text-primary" href="<?= base_url('recover') ?>"><?= $data_recover ?></a>
+                                        <a class="small text-decoration-underline text-primary"
+                                            href="<?= base_url('recover') ?>"><?= $data_recover ?></a>
                                     </div>
                                     <div class="col-12 text-center">
-                                        <a class="small text-decoration-underline text-primary" href="<?= base_url('admin/documentos/PoliticaDeProteccionDeDatos.pdf') ?>"><?= $data_protection ?></a>
+                                        <a class="small text-decoration-underline text-primary"
+                                            href="#"><?= $data_protection ?></a>
                                     </div>
                                 </form>
                             </div>
@@ -133,10 +140,10 @@
                 });
 
                 if (result.requiereCambioPass) {
-                    setTimeout(function() {
+                    setTimeout(function () {
                         loader('hide');
                         window.location.href = 'http://localhost/distribuidora-rex/recover';
-                    }, 8000); 
+                    }, 8000);
                 }
             }
 
@@ -186,7 +193,7 @@
 
         login(formData);
     });
-    
+
 </script>
 
 <?php echo $this->endSection(); ?>
