@@ -88,3 +88,27 @@ $routes->post('admin/tabs/obtenerTabsRol', 'Admin\TabsController::getAllTabByRol
 $routes->post('admin/tabs/quitarTabRol', 'Admin\TabsController::deleteRolTab');
 $routes->post('admin/tabs/asignarTabRol', 'Admin\TabsController::addRolTab');
 
+
+/** Rutas de la loseta de  "Dashboards".*/
+$routes->get('dashboards/onboarding/(:num)', 'Dashboards\DashboardsController::index/$1');
+
+/** Rutas de reportes Power BI */
+$routes->get('dashboards/reportesPowerBi/(:num)', 'Dashboards\ReportesPowerBiController::index/$1');
+$routes->get('dashboards/adminReportesPowerBi/(:num)', 'Dashboards\ReportesPowerBiController::adminReportes/$1');
+$routes->get('dashboards/listaUsuarios', 'Dashboards\ReportesPowerBiController::getActivedUsers');
+$routes->post('dashboards/reportesPowerBi/crearReporte', 'Dashboards\ReportesPowerBiController::createReporte');
+$routes->post('dashboards/reportesPowerBi/(:num)', 'Dashboards\ReportesPowerBiController::getReporteById/$1');
+$routes->post('dashboards/reportesPowerBi/asignarUsuarios', 'Dashboards\ReportesPowerBiController::asignarUsuarios');
+$routes->post('dashboards/reportesPowerBi/actualizarReporte', 'Dashboards\ReportesPowerBiController::updateReporte');
+$routes->post('dashboards/reportesPowerBi/eliminarReporte', 'Dashboards\ReportesPowerBiController::deleteReporte');
+
+
+/** Rutas de la loseta de  "Financiero".*/
+$routes->get('financiero/onboarding/(:num)', 'Financiero\FinancieroController::index/$1');
+$routes->get('financiero/controlFinanciero/(:num)', 'Financiero\FinancieroController::controlFinanciero/$1');
+$routes->post('financiero/temporales', 'Financiero\FinancieroController::temporales');
+$routes->post('financiero/empleadosSinTemporal', 'Financiero\FinancieroController::empleadosSinTemporal');
+$routes->post('financiero/consultar-reporte', 'Financiero\FinancieroController::consultarReporte');
+$routes->get('financiero/procesar-reporte', 'Financiero\FinancieroController::procesarReporte');
+
+

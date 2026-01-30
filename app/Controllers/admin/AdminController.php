@@ -5,7 +5,6 @@ namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\LosetasModel;
 use App\Models\AdminModel;
-use App\Models\PrecodificacionesModel;
 use CodeIgniter\HTTP\RedirectResponse;
 
 use CodeIgniter\HTTP\ResponseInterface;
@@ -17,8 +16,6 @@ class AdminController extends BaseController
     private $losetas_model;
 
     private $admin_model;
-
-    private $precodificaciones_model;
 
     /**
      * Metodo constructor.

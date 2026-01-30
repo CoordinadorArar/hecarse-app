@@ -37,7 +37,7 @@ class RolesController extends BaseController
     {
         helper('ConstruirDataVista');
 
-        $data = construirVista($this->session->get('usu_id'),$id_loseta);
+        $data = construirVista($this->session->get('usu_id'), $id_loseta);
 
         if ($data instanceof RedirectResponse) {
             return $data;
@@ -71,7 +71,7 @@ class RolesController extends BaseController
             $html .= '<tr class="' . $estado . '">
                     <td>' . htmlspecialchars($rol['Nombre']) . '</td>
                     <td>' . htmlspecialchars($rol['FechaInicio']) . '</td>
-                    <td>'. htmlspecialchars($rol['NombreUsuario'].' '.$rol['ApellidoUsuario']). '</td>
+                    <td>' . htmlspecialchars($rol['NombreUsuario'] . ' ' . $rol['ApellidoUsuario']) . '</td>
                     <td>
                         <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editRolModal" onclick="obtenerRol(' . $rol['Id'] . ')">Modificar</button>
                     </td>
@@ -92,7 +92,7 @@ class RolesController extends BaseController
      */
     public function getRolById(int $id): ResponseInterface
     {
-        $rol =  $this->roles_model->getRolById($id);
+        $rol = $this->roles_model->getRolById($id);
         return $this->response->setJSON(['success' => true, 'rol' => $rol]);
     }
 
@@ -165,12 +165,12 @@ class RolesController extends BaseController
 
         $html = '';
         foreach ($modulos as $modulo) {
-            $html_nombre_loseta = (!empty($modulo['IdLoseta']))? $modulo['LosetaPadre'] . ' > ' . $modulo['Nombre'] : $modulo['Nombre'] ;
-            $html_nombre_modulo = (!empty($modulo['IdModulo']))? $modulo['LosetaPadre'] . ' > ' . $modulo['ModuloPadre'] . ' > '. $modulo['Nombre'] : $html_nombre_loseta;
+            $html_nombre_loseta = (!empty($modulo['IdLoseta'])) ? $modulo['LosetaPadre'] . ' > ' . $modulo['Nombre'] : $modulo['Nombre'];
+            $html_nombre_modulo = (!empty($modulo['IdModulo'])) ? $modulo['LosetaPadre'] . ' > ' . $modulo['ModuloPadre'] . ' > ' . $modulo['Nombre'] : $html_nombre_loseta;
             $html .= '
                 <li id="' . $modulo['Id'] . '" class="list-group-item d-flex justify-content-between align-items-center">
                     ' . $html_nombre_modulo . '
-                    <button id="asignar_' .  esc($modulo['Id'])  . '" type="button" class="btn btn-primary btn-sm" onclick="asginarModulo(' . esc($modulo['Id']) . ')">Asignar</button>
+                    <button id="asignar_' . esc($modulo['Id']) . '" type="button" class="btn btn-primary btn-sm" onclick="asginarModulo(' . esc($modulo['Id']) . ')">Asignar</button>
                 </li>
             ';
         }
@@ -191,12 +191,12 @@ class RolesController extends BaseController
 
         $html = '';
         foreach ($modulos as $modulo) {
-            $html_nombre_loseta = (!empty($modulo['IdLoseta']))? $modulo['LosetaPadre'] . ' > ' . $modulo['Nombre'] : $modulo['Nombre'] ;
-            $html_nombre_modulo = (!empty($modulo['IdModulo']))? $modulo['LosetaPadre'] . ' > ' . $modulo['ModuloPadre'] . ' > '. $modulo['Nombre'] : $html_nombre_loseta;
+            $html_nombre_loseta = (!empty($modulo['IdLoseta'])) ? $modulo['LosetaPadre'] . ' > ' . $modulo['Nombre'] : $modulo['Nombre'];
+            $html_nombre_modulo = (!empty($modulo['IdModulo'])) ? $modulo['LosetaPadre'] . ' > ' . $modulo['ModuloPadre'] . ' > ' . $modulo['Nombre'] : $html_nombre_loseta;
             $html .= '
                 <li id="' . $modulo['Id'] . '" class="list-group-item d-flex justify-content-between align-items-center">
                     ' . $html_nombre_modulo . '
-                    <button id="quitar_' .  esc($modulo['Id'])  . '" type="button" class="btn btn-primary btn-sm" onclick="quitarModulo(' . esc($modulo['Id']) . ')">Quitar</button>
+                    <button id="quitar_' . esc($modulo['Id']) . '" type="button" class="btn btn-primary btn-sm" onclick="quitarModulo(' . esc($modulo['Id']) . ')">Quitar</button>
                 </li>
             ';
         }
@@ -239,15 +239,17 @@ class RolesController extends BaseController
         $flag = false;
 
         foreach ($modulos_rol as $rol) {
-            if ($rol['Id'] == $id_rol) {
+            if ($rol['IdModulo'] == $id_modulo) {
                 $flag = true;
                 break;
             }
         }
 
         if ($flag) {
+            print_r("Actualizando modulo al rol");
             $this->losetas_model->updateRolModule($id_rol, $id_modulo);
         } else {
+            print_r("Agregando modulo al rol");
             $this->losetas_model->addRolModule($id_rol, $id_modulo);
         }
 
@@ -293,7 +295,7 @@ class RolesController extends BaseController
         return $this->response->setJSON([
             'success' => true,
             'message' =>
-            'Módulos asignados correctamente.',
+                'Módulos asignados correctamente.',
             'modulos' => $modulos,
             'roles' => $roles
         ]);
